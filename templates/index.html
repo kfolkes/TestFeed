@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>Toasties</title>
+
+<!-- old css code
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+-->
+<link rel="stylesheet" href="backend//static/css/bootstrap-darkly.css"></link>
+<script src="../static/scripts/jquery-1.12.4/jquery-1.12.4.min.js"></script>
+<script src="../static/scripts/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<!-- Nav Bar -->
+<div class="bs-component">
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header" style="margin-left: 20px; margin-right: 20px;">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="#" class="navbar-left"><img src="../static/media/toast.png" style="margin-top: 10px; margin-right: 10px;" width="40" height="40"></a>
+<a class="navbar-brand" href="#">Toasties</a>
+<ul class="nav navbar-nav navbar-left">
+	<li><a href="index.html">Home</a></li>
+	<li><a href="upload.html">Upload Speech</a></li>
+	<li><a href="results.html">Results</a></li>
+	<li><a href="#">Help</a></li>
+</ul>
+</div>
+
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#">My Toasts</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+
+
+
+<!-- Top Div: timer stuff -->
+<div align="center" style="padding: 20px;">
+	<h1 id="timer" style="font-size: 75px;">
+        00:00:00:000
+	</h1>
+</div>
+
+<!-- Middle Div: audience screen -->
+<div align="center">
+	<div>
+
+	<img id="audience" src="../static/media/audience.png" alt="audience" height="500" width="800"></img>
+
+	</div>
+</div>
+
+<!-- Bottom Div: start, stop -->
+<br>
+<br>
+<div align="center" style="padding:20px;">
+	<button id="start_button" type="button" style="margin-right: 20px;" class="btn btn-success">Start</button>
+	<button id="stop_button" type="button" class="btn btn-danger">Stop</button>
+</div>
+
+<!-- Supposed to be the code for taking in audio/video from user -->
+<form action="server.cgi" method="post" enctype="multipart/form-data">
+    <input type="file" name="video" accept="video/*" capture>
+    <input type="submit" value="Upload">
+</form>
+
+
+
+
+
+</body>
+
+<script src="../static/scripts/index.js"></script>
+
+</html>
