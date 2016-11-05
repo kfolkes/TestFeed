@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<title>Test Feed</title>
+<title>TestFeed</title>
 
 <!-- old css code
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,7 +15,6 @@
 
 </head>
 <body>
-
 <!-- Nav Bar -->
 <div class="bs-component">
 <nav class="navbar navbar-default">
@@ -46,59 +45,27 @@
 </nav>
 </div>
 
+<img class="img-responsive" src="../static/media/TestFeed.png" alt="banner" style="width:100%" >
 
-
-<!-- Top Div: timer stuff -->
-<div align="center" style="padding: 20px;">
-	<h1 id="timer" style="font-size: 75px;">
-        00:00:00:000
-	</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Column 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Column 3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
 </div>
-
-<!-- Middle Div: audience screen -->
-<div align="center">
-	<div>
-
-	<img id="audience" src="../static/media/audience.png" alt="audience" height="500" width="800"></img>
-
-	</div>
-</div>
-
-<!-- Bottom Div: start, stop -->
-<br>
-<br>
-<div align="center" style="padding:20px;">
-	<button id="start_button" type="button" style="margin-right: 20px;" class="btn btn-success">Start</button>
-	<button id="stop_button" type="button" class="btn btn-danger">Stop</button>
-</div>
-
-<!-- Supposed to be the code for taking in audio/video from user -->
-<form action="server.cgi" method="post" enctype="multipart/form-data">
-    <input type="file" name="video" accept="video/*" capture>
-    <input type="submit" value="Upload">
-</form>
-
-
-
-
-
 </body>
 
-<script src="../static/scripts/index.js"></script>
 
-
-<!-- this, preferably, goes inside head element: -->
-<!--[if lt IE 9]>
-<script type="text/javascript" src="../static/jSignature/scripts/flashcanvas.js"></script>
-<![endif]-->
-
-<div id="signature"></div>
-
-<!-- you load jquery somewhere before jSignature ... -->
-<script src="../static/scripts/jSignature/jSignature.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#signature").jSignature()
-    })
-</script>
-</html>
